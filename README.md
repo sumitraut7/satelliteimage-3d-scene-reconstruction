@@ -2,20 +2,29 @@
 
 This project explores the feasibility of reconstructing 3D urban scenes using satellite images via classical Structure-from-Motion (SfM) and Multi-view Stereo (MVS) techniques. We collect satellite images from Google Earth Pro, perform SfM using COLMAP, and fuse depth information to produce sparse and dense point clouds.
 
+## 🖼️ Sample Output
+
+Here’s a visual glimpse of the reconstructed 3D scene from satellite imagery:
+
+### 🎥 Reconstruction Preview
+![3D Reconstruction Demo](3dpreview.gif)
+
 ## 📌 Overview
 
 - **Domain:** 3D Scene Reconstruction
-- **Techniques:** Structure-from-Motion (SfM), Multi-View Stereo (MVS), Monocular Depth Estimation
+- **Techniques:** Structure-from-Motion (SfM), Multi-View Stereo (MVS)
 - **Tools:** Google Earth Pro, COLMAP, MiDaS, Open3D, Python
 - **Dataset:** Satellite imagery of the UCI campus from 2005–2025 (temporal), 2025 (current), and 3D-enabled satellite view
 
 ## 📂 Project Structure
-
-├── data_collection.ipynb # Satellite image extraction and dataset generation
+```
+.
+├── data_collection.ipynb         # Satellite image extraction and dataset generation
 ├── reconstruction_pipeline.ipynb # Reconstruction experiments and visualizations
-├── report.pdf # Final technical report with results and discussion
-├── images/ # Qualitative reconstruction outputs
-└── colmap_workspace/ # Sparse and dense reconstruction outputs
+├── report.pdf                    # Final technical report with results and discussion
+├── images/                       # Qualitative reconstruction outputs
+└── colmap_workspace/             # Sparse and dense reconstruction outputs
+```
 
 ## 📸 Dataset Variants
 
@@ -29,7 +38,6 @@ This project explores the feasibility of reconstructing 3D urban scenes using sa
 2. **Sparse Reconstruction**: Feature extraction (SIFT), exhaustive matching, SfM via COLMAP
 3. **Dense Reconstruction**:
    - PatchMatch stereo + depth fusion (COLMAP MVS)
-   - Alternative: MiDaS monocular depth backprojection
 4. **Visualization**: Point cloud and mesh rendering via Open3D / MeshLab
 
 ## 📊 Results Summary
@@ -44,7 +52,6 @@ This project explores the feasibility of reconstructing 3D urban scenes using sa
 
 - Multi-temporal images improve coverage but suffer from inconsistency.
 - 3D-enabled images yield best structure with minimal error.
-- Monocular depth maps can extend COLMAP outputs when hardware is limited.
 
 ## 🚧 Challenges
 
@@ -60,7 +67,8 @@ This project explores the feasibility of reconstructing 3D urban scenes using sa
 
 ## 📎 Resources
 
-- [COLMAP](https://colmap.github.io/)
-- [MiDaS Depth Estimation](https://github.com/isl-org/MiDaS)
-- [Open3D](http://www.open3d.org/)
-- [Google Earth Pro](https://www.google.com/earth/versions/)
+- [COLMAP](https://github.com/colmap/colmap) 
+- [MiDaS Depth Estimation](https://github.com/isl-org/MiDaS) 
+- [Open3D](http://www.open3d.org/) 
+- [MeshLab](https://www.meshlab.net/) 
+- [Google Earth Pro](https://www.google.com/earth/versions/) 
