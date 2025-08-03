@@ -4,7 +4,7 @@ This project explores the feasibility of reconstructing 3D urban scenes using sa
 
 ## 🖼️ Sample Output
 
-Here’s a visual glimpse of the reconstructed 3D scene from satellite imagery:
+Here’s a visual glimpse of the reconstructed 3D scene from satellite imagery of UCI Computer Science Department Area
 
 ### 🎥 Reconstruction Preview
 ![3D Reconstruction Demo](3dpreview.gif)
